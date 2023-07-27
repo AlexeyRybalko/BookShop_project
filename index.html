@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookShop</title>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <span class="bookshop-logo">Bookshop</span>
+            <nav class="header-navigation">
+                <ul class="header-navigation-list">
+                    <li class="header-navigation-list__item"><a class="header-navigation-list__link" href="">Books</a></li>
+                    <li class="header-navigation-list__item"><a class="header-navigation-list__link" href="">Audiobooks</a></li>
+                    <li class="header-navigation-list__item"><a class="header-navigation-list__link" href="">Stationery & gifts</a></li>
+                    <li class="header-navigation-list__item"><a class="header-navigation-list__link" href="">Blog</a></li>
+                </ul>
+            </nav>
+            <ul class="header-toolbar">
+                <li class="header-toolbar__item"><button class="header-toolbar-button login"><img src="<%=require('./SVG/login.svg')%>" alt="login"></button></li>
+                <li class="header-toolbar__item"><button class="header-toolbar-button search"><img src="./SVG/search.svg" alt="search"></button></li>
+                <li class="header-toolbar__item">
+                    <button class="header-toolbar-button cart">
+                        <img src="./SVG/cart.svg" alt="cart">
+                        <div class="cart-counter">0</div>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="banner-section">
+            <div class="container">
+                <a class="banner-promo-link" href=""><img class="banner-promo promo-change" src="./PNG/promo 1.png" alt="promo"></a>
+                <a class="banner-promo-link" href=""><img class="banner-promo promo-top" src="./PNG/promo 2.png" alt="promo"></a>  
+                <div class="slider-images">
+                </div>
+                <div class="slider-dots"></div>
+            </div>
+        </section>
+
+        <section class="library-section">
+            <div class="container">
+                <div class="library-section-content">
+                    <img class="category-list__background" src="./PNG/background.png" alt="background">
+                    <ul class="category-list">
+                        <li class="category-list__item active"><a class="category-list__link" data-category="Architecture" href="">Architecture</a></li>
+                        <li class="category-list__item"><a class="category-list__link" data-category="Art" href="">Art & Fashion</a></li>
+                        <li class="category-list__item"><a class="category-list__link" data-category="Biography & Autobiography" href="">Biography</a></li>
+                        <li class="category-list__item"><a class="category-list__link" data-category="Business" href="">Business</a></li>
+                        <li class="category-list__item"><a class="category-list__link" data-category="Crafts & Hobbies" href="">Crafts & Hobbies</a></li>
+                        <li class="category-list__item"><a class="category-list__link" data-category="Drama" href="">Drama</a></li>
+                        <li class="category-list__item"><a class="category-list__link" data-category="Fiction" href="">Fiction</a></li>
+                        <li class="category-list__item"><a class="category-list__link" data-category="Cooking" href="">Food & Drink</a></li>
+                        <li class="category-list__item"><a class="category-list__link" data-category="Health & Fitness" href="">Health & Wellbeing</a></li>
+                        <li class="category-list__item"><a class="category-list__link" data-category="History" href="">History & Politics</a></li>
+                        <li class="category-list__item"><a class="category-list__link" data-category="Humor" href="">Humor</a></li>
+                        <li class="category-list__item"><a class="category-list__link" data-category="Poetry" href="">Poetry</a></li>
+                        <li class="category-list__item"><a class="category-list__link" data-category="Psychology" href="">Psychology</a></li>
+                        <li class="category-list__item"><a class="category-list__link" data-category="Science" href="">Science</a></li>
+                        <li class="category-list__item"><a class="category-list__link" data-category="Technology" href="">Technology</a></li>
+                        <li class="category-list__item"><a class="category-list__link" data-category="Travel" href="">Travel & Maps</a></li>
+                    </ul>
+
+                    <template class="book-card-template">
+                        <div class="book-card">
+                            <div class="book-card__cover">
+                                <img class="book-card__cover-image" src="" alt="cover">
+                            </div>
+        
+                            <div class="book-card__text">
+                                <span class="book-card__text_author">Kevin Kwan</span>
+                                <span class="book-card__text_title">Crazy rich asians</span>
+                                <div class="book-card__rating">
+                                    <div class="book-card__rating_stars">
+                                    </div>
+                                    <span class="book-card__rating_reviews">252 review</span>
+                                </div>
+                                <div class="book-card__text_description">
+                                    <p class="book-card__text_description-content">
+                                    </p>
+                                </div>
+                                <span class="book-card__text_price">$4.99</span>
+                                <button class="library-button">buy now</button>
+                            </div>
+                        </div>
+                    </template>
+
+                    <div class="book-list"></div>
+                </div>
+                <button class="library-button load-more-button">load more</button>
+            </div>
+        </section>
+
+    </main>
+    <script src="./src/index.js" type="module"></script>
+</body>
+</html>

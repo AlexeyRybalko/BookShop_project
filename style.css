@@ -1,0 +1,405 @@
+@font-face {
+    font-family: "Montserrat-bold";
+    src: url("./Fonts/Montserrat-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat-regular";
+    src: url("./Fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat-extraBold";
+    src: url("./Fonts/Montserrat-Black.ttf");
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    font-family: "Montserrat-regular";
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    height: 116px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 99;
+}
+
+.container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header-content {
+    max-width: 1120px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.bookshop-logo {
+    font-family: "Montserrat-bold";
+    font-size: 24px;
+    line-height: 30px;
+    color: #1C2A39;
+    /* margin-left: 166px; */
+    align-self: flex-start;
+}
+
+.header-navigation {
+    /* margin-left: 243px; */
+    align-self: flex-start;
+}
+
+.header-navigation-list {
+    font-family: "Montserrat-bold";
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: #5C6A79;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.header-navigation-list__item:nth-child(n+2) {
+    margin-left: 40px;
+}
+
+.header-navigation-list__item:nth-child(1) {
+    font-family: "Montserrat-extraBold";
+    font-weight: 900;
+    color: #1C2A39;
+}
+
+.header-navigation-list__link {
+    text-decoration: none;
+    color: inherit;
+    white-space: nowrap;
+}
+
+.header-toolbar {
+    /* position: relative; */
+    padding: 0;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    /* margin: 0 0 0 252px; */
+    align-items: center;
+}
+
+.header-toolbar__item:nth-child(n+2) {
+    margin-left: 40px;
+}
+
+.header-toolbar-button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    align-self: center;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart-counter {
+    position: absolute;
+    top: 8px;
+    left: 4px;
+    width: 13px;
+    max-width: 25px;
+    height: 13px;
+    border-radius: 50%;
+    text-align: center;
+    font-family: "Montserrat-regular";
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    color: #FFFFFF;
+    background-color: #FF353A;
+}
+
+/* .cart-counter-bignum {
+    position: absolute;
+    top: 8px;
+    left: 4px;
+    width: 25px;
+    height: 13px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "Montserrat-regular";
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    color: #FFFFFF;
+    background-color: #FF353A;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
+
+.banner-section {
+    overflow-x: hidden;
+}
+
+.slider-images {
+    position: relative;
+    width: 1120px;
+    height: 702px;
+}
+
+.image {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 800ms ease;
+}
+
+.slider-images .image.active {
+    opacity: 1;
+}
+
+.slider-dots {
+    margin-top: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider__dots-item {
+    width: 12px;
+    height: 12px;
+    background: #EFEEF6;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background 0.4s ease;
+  }
+  
+.slider__dots-item:hover, .slider__dots-item.active {
+    background: #9E98DC;
+  }
+
+.banner-promo {
+    position: absolute;
+    z-index: 2;
+    box-shadow: 8px 14px 30px 0px rgba(34, 60, 80, 0.25);
+}
+
+.promo-change {
+    top: 79px;
+    left: 1057px;
+}
+
+.promo-top {
+    top: 362px;
+    left: 1143px
+}
+
+.library-section-content {
+    display: flex;
+}
+
+.category-list {
+    min-width: 100px;
+    margin-top: 150px;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Montserrat-regular";
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #5C6A79;
+    white-space: nowrap;
+}
+
+.category-list__item:nth-child(n+2){
+    margin-top: 23px;
+}
+
+.category-list__item.active{
+    font-family: "Montserrat-bold";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1C2A39;
+}
+
+.category-list__item.active::before{
+    position: absolute;
+    content: "\25CF";
+    font-size: 70%;
+    color: #756AD3;
+    left: -16px;
+}
+
+.category-list__link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.category-list__background {
+    position: absolute;
+    z-index: -1;
+    top: 105px;
+    left: -160px;
+}
+
+.book-list {
+    margin-left: 96px;
+    margin-top: 54px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.book-card {
+    display: flex;
+    width: 424px;
+    height: 300px;
+    margin-top: 96px;
+}
+
+.book-card__cover-image {   
+    width: 212px;
+    height: 300px;
+    overflow: hidden;
+    box-shadow: 8px 14px 30px 0px rgba(34, 60, 80, 0.25)
+}
+
+.book-card__text {
+    width: 176px;
+    min-height: 225px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-left: 36px;
+}
+
+.book-card__text_author {
+    height: 14px;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 13px;
+    color: #5C6A79;
+
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+}
+
+.book-card__text_title {
+    font-family: "Montserrat-bold";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1C2A39;
+    margin-top: 4px;
+    height: 40px;
+
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+}
+
+.book-card__rating {
+    display: flex;
+    margin-top: 4px;
+    height: 14px;
+}
+
+.book-card__rating_reviews {
+    margin-left: 6px;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 13px;
+    color: #5C6A79;
+}
+
+.book-card__text_description {
+    margin-top: 16px;
+    height: 40px;
+}
+
+.book-card__text_description-content {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 13px;
+    color: #5C6A79;
+    text-transform: capitalize;
+
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+}
+
+.book-card__text_price {
+    height: 16px;
+    font-family: "Montserrat-bold";
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    color: #1C2A39;
+    margin-top: 16px;
+}
+
+.library-button {
+    text-transform: uppercase;
+    width: 176px;
+    height: 45px;
+    margin-top: 16px;
+    background-color: transparent;
+    border: 1px solid;
+    border-color: #4C3DB2;
+    font-family: "Montserrat-bold";
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 10px;
+    color: #4C3DB2;
+    cursor: pointer;
+}
+
+.in-the-cart-button {
+    color: #5C6A79;
+    border-color:#EEEDF5;
+}
+
+.load-more-button {
+    margin-top: 96px;
+    position: relative;
+    left: 50%;
+}
+
