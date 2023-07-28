@@ -1,10 +1,11 @@
 import starYellow from '../../SVG/Star-yellow.svg'
 import starWhite from '../../SVG/Star-white.svg'
+import defaultCover from '../../PNG/default-book-cover.png'
 
 export default class BookCard {
     constructor (data, config) {
         this.data = data;
-        this.cover = data.volumeInfo.imageLinks?.thumbnail || '/PNG/default-book-cover.png';
+        this.cover = data.volumeInfo.imageLinks?.thumbnail || defaultCover;
         this.authors = data.volumeInfo.authors;
         this.title = data.volumeInfo.title;
         this.rating = data.volumeInfo.averageRating;
