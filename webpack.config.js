@@ -48,6 +48,10 @@ module.exports = {
         ],
     },
 
+    performance: {
+        hints: false,
+    },
+
     plugins: [
         new MiniCssExtractPlugin(), 
         new HtmlWebpackPlugin({
