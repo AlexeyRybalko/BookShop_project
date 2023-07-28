@@ -20,10 +20,10 @@
             </nav>
             <ul class="header-toolbar">
                 <li class="header-toolbar__item"><button class="header-toolbar-button login"><img src="<%=require('./SVG/login.svg')%>" alt="login"></button></li>
-                <li class="header-toolbar__item"><button class="header-toolbar-button search"><img src="./SVG/search.svg" alt="search"></button></li>
+                <li class="header-toolbar__item"><button class="header-toolbar-button search"><img src="<%=require('./SVG/search.svg')%>" alt="search"></button></li>
                 <li class="header-toolbar__item">
                     <button class="header-toolbar-button cart">
-                        <img src="./SVG/cart.svg" alt="cart">
+                        <img src="<%=require('./SVG/cart.svg')%>" alt="cart">
                         <div class="cart-counter">0</div>
                     </button>
                 </li>
@@ -34,8 +34,8 @@
     <main>
         <section class="banner-section">
             <div class="container">
-                <a class="banner-promo-link" href=""><img class="banner-promo promo-change" src="./PNG/promo 1.png" alt="promo"></a>
-                <a class="banner-promo-link" href=""><img class="banner-promo promo-top" src="./PNG/promo 2.png" alt="promo"></a>  
+                <a class="banner-promo-link" href=""><img class="banner-promo promo-change" src="<%=require('./PNG/promo 1.png')%>" alt="promo"></a>
+                <a class="banner-promo-link" href=""><img class="banner-promo promo-top" src="<%=require('./PNG/promo 2.png')%>" alt="promo"></a>  
                 <div class="slider-images">
                 </div>
                 <div class="slider-dots"></div>
@@ -45,7 +45,7 @@
         <section class="library-section">
             <div class="container">
                 <div class="library-section-content">
-                    <img class="category-list__background" src="./PNG/background.png" alt="background">
+                    <img class="category-list__background" src="<%=require('./PNG/background.png')%>" alt="background">
                     <ul class="category-list">
                         <li class="category-list__item active"><a class="category-list__link" data-category="Architecture" href="">Architecture</a></li>
                         <li class="category-list__item"><a class="category-list__link" data-category="Art" href="">Art & Fashion</a></li>
@@ -68,7 +68,7 @@
                     <template class="book-card-template">
                         <div class="book-card">
                             <div class="book-card__cover">
-                                <img class="book-card__cover-image" src="" alt="cover">
+                                <img class="book-card__cover-image" alt="cover">
                             </div>
         
                             <div class="book-card__text">

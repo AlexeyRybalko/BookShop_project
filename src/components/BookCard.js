@@ -1,3 +1,6 @@
+import starYellow from '../../SVG/Star-yellow.svg'
+import starWhite from '../../SVG/Star-white.svg'
+
 export default class BookCard {
     constructor (data, config) {
         this.data = data;
@@ -52,9 +55,9 @@ export default class BookCard {
 
         for (let i = 1;  i <= 5; i++ ) {
             if (i <= Math.round(this.rating)) {
-                stars.innerHTML += '<img class="star-icon" src="./SVG/Star-yellow.svg" alt="Star-yellow">'
+                stars.innerHTML += `<img class="star-icon" src=${starYellow} alt="Star-yellow">`
             } else {
-                stars.innerHTML += '<img class="star-icon" src="./SVG/Star-white.svg" alt="Star-white">'
+                stars.innerHTML += `<img class="star-icon" src=${starWhite} alt="Star-white">`
             }
         }
     }

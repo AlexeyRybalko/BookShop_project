@@ -1,9 +1,14 @@
+import blackFridayBanner from '../../PNG/black-friday-banner.png'
+import topBanner from '../../PNG/top-10-banner.png'
+import cozyBooksBanner from '../../PNG/cozy-books-banner.png'
+
+
 const images = [{
-    url: './PNG/black-friday-banner.png',
+    url: blackFridayBanner,
   },{
-    url: './PNG/top-10-banner.png', 
+    url: topBanner, 
   },{
-    url: './PNG/cozy-books-banner.png',
+    url: cozyBooksBanner,
   }];
 
 const sliderImages = document.querySelector(".slider-images");

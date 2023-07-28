@@ -2,13 +2,19 @@
   "scripts": {
     "build": "webpack --mode production",
     "lint": "npx eslint *.js",
-    "dev": "webpack serve --mode development"
+    "dev": "webpack serve --mode development",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
-  
+  "repository": {
+    "url": "git+https://github.com/AlexeyRybalko/BookShop_project.git"
+  },
   "devDependencies": {
     "css-loader": "^6.8.1",
     "css-minimizer-webpack-plugin": "^5.0.1",
     "eslint": "^8.45.0",
+    "gh-pages": "^5.0.0",
+    "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.7.6",
     "style-loader": "^3.3.3",
