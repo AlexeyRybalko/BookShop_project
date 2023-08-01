@@ -22,8 +22,6 @@ html, body {
 }
 
 .header {
-    display: flex;
-    height: 116px;
     align-items: center;
     position: sticky;
     top: 0;
@@ -39,28 +37,29 @@ html, body {
 }
 
 .header-content {
+    height: 116px;
     max-width: 1120px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: center;
 }
 
 .bookshop-logo {
+    align-self: center;
     font-family: "Montserrat-bold";
     font-size: 24px;
     line-height: 30px;
     color: #1C2A39;
-    /* margin-left: 166px; */
-    align-self: flex-start;
 }
 
-.header-navigation {
-    /* margin-left: 243px; */
-    align-self: flex-start;
+.header-navigation-mobile {
+    display: none;
 }
 
 .header-navigation-list {
+    width: 372px;
     font-family: "Montserrat-bold";
     font-weight: 700;
     font-size: 10px;
@@ -70,10 +69,7 @@ html, body {
     padding: 0;
     list-style: none;
     display: flex;
-}
-
-.header-navigation-list__item:nth-child(n+2) {
-    margin-left: 40px;
+    justify-content: space-between;
 }
 
 .header-navigation-list__item:nth-child(1) {
@@ -89,12 +85,10 @@ html, body {
 }
 
 .header-toolbar {
-    /* position: relative; */
     padding: 0;
     list-style: none;
     display: flex;
     margin: 0;
-    /* margin: 0 0 0 252px; */
     align-items: center;
 }
 
@@ -130,25 +124,6 @@ html, body {
     color: #FFFFFF;
     background-color: #FF353A;
 }
-
-/* .cart-counter-bignum {
-    position: absolute;
-    top: 8px;
-    left: 4px;
-    width: 25px;
-    height: 13px;
-    border-radius: 5px;
-    text-align: center;
-    font-family: "Montserrat-regular";
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 12px;
-    color: #FFFFFF;
-    background-color: #FF353A;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-} */
 
 .banner-section {
     overflow-x: hidden;
@@ -193,11 +168,11 @@ html, body {
     margin: 0 10px;
     cursor: pointer;
     transition: background 0.4s ease;
-  }
+}
   
 .slider__dots-item:hover, .slider__dots-item.active {
     background: #9E98DC;
-  }
+}
 
 .banner-promo {
     position: absolute;
@@ -403,3 +378,166 @@ html, body {
     left: 50%;
 }
 
+.burger-menu {
+    display: none;
+}
+
+@media screen and (max-width: 1370px) {
+
+    .container {
+        max-width: 320px;
+    }
+
+    .header-content {
+        height: 50px;
+        padding-right: 10px;
+    }
+
+    .header-navigation {
+        display: none;
+    }
+
+    .header-navigation-mobile{
+        display: flex;
+        padding: 0 10px 0 7px;
+    }
+
+    .header-navigation-list {
+        width: 320px;
+    }
+
+    .header-toolbar__item:nth-child(n+2) {
+        margin-left: 20px;
+    }
+
+    .banner-section {
+        display: none;
+    }
+
+    .category-list {
+        opacity: 0;
+        transition: 0.3s;
+        width: 160px;
+        position: fixed;
+        background: #EFEEF6;
+        z-index: 3;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .category-list__item.active::before {
+        display: none;
+    }
+
+    .category-list.active {
+        opacity: 90%;
+    }
+
+    .category-list__background {
+        display: none;
+    }
+
+    .book-list {
+        margin: 0;
+    }
+
+    .book-card__cover-image {
+        width: 120px;
+        height: 168px;
+        padding-left: 5px;
+    }
+
+    .book-card {
+        margin-top: 20px;
+        max-width: 320px;
+        height: 168px;
+    }
+
+    .book-card__text {
+        padding-right: 10px;
+        margin-left: auto;
+        height: 168px;
+        min-height: fit-content;
+    }
+    
+    .book-card__text_title {
+        font-size: 12px;
+        line-height: 16px;
+        height: 30px;
+    }
+    
+    .book-card__text_description {
+        margin-top: 2px;
+    }
+    
+    .book-card__text_price {
+        height: 10px;
+        font-size: 12px;
+        line-height: 16px;
+        margin-top: 2px;
+    }
+    
+    .library-button {
+        width: 176px;
+        height: 35px;
+        margin-top: 10px;
+    }
+
+    .library-button.load-more-button {
+        display: block;
+        margin: 20px auto;
+        position: static;
+    }
+
+    .burger-menu {
+        cursor: pointer;
+        display: block;
+        position: relative;
+        border: none;
+        background: transparent;
+        width: 40px;
+        height: 26px;
+        padding: 0;
+        margin: 0;
+        z-index: 1;
+        scale: 0.7;
+    }
+
+    .burger-menu::before,
+    .burger-menu::after {
+        content: '';
+        left: 0;
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 10px;
+        background: #000;
+    }
+
+    .burger-menu::before {
+        top: 0;
+        box-shadow: 0 11px 0 #000;
+        transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+    }
+
+    .burger-menu::after {
+        bottom: 0;
+        transition: bottom .3s .15s, transform .3s;
+    }
+
+    .burger-menu.active::before {
+        z-index: 1;
+        top: 11px;
+        transform: rotate(45deg);
+        box-shadow: 0 6px 0 rgba(0,0,0,0);
+        transition: box-shadow .15s, top .3s, transform .3s .15s;
+    }
+
+    .burger-menu.active::after {
+        z-index: 1;
+        bottom: 11px;
+        transform: rotate(-45deg);
+        transition: bottom .3s, transform .3s .15s;
+    }  
+}

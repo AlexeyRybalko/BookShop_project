@@ -9,6 +9,13 @@ export default class BookList {
 
     setListeners(){
         const loadMoreButton =  document.querySelector('.load-more-button');
+        const burgerMenu = document.querySelector('.burger-menu');
+        const categoryList = document.querySelector('.category-list');
+
+        burgerMenu.addEventListener('click', () => {
+            burgerMenu.classList.toggle('active');
+            categoryList.classList.toggle('active');
+        });
 
         document.querySelectorAll('.category-list__link').forEach(el => {
             el.addEventListener('click', (evt) => {
@@ -19,6 +26,8 @@ export default class BookList {
                 this.setBooks(this.category);
                 document.querySelector('.category-list__item.active').classList.remove('active');
                 evt.target.parentNode.classList.add('active');
+                categoryList.classList.remove('active');
+                burgerMenu.classList.remove('active');
             });
         });
         
@@ -36,8 +45,6 @@ export default class BookList {
     }
 
     renderBooks(booksData){
-        console.log(booksData);
-
         this.bookList.innerHTML = '';
         
         booksData.forEach(book => {
